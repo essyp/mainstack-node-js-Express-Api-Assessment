@@ -69,14 +69,6 @@ app.get("/",(req,res)=>{
     return res.render("index.ejs");
 });
 
-app.all('*', function(req, res, next){
-  if (req.secure) {
-      return next();
-  }
-
-  res.redirect('http://'+req.hostname + ':' + app.get('secPort') + req.url);
-});
-
 // routes 
 app.use("/api/v1/auth",authRouter);
 app.use("/api/v1/orders",orderRouter);
