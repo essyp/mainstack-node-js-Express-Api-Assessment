@@ -10,22 +10,269 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.jpeg" rel="icon">
-  <link href="/assets/img/favicon.jpeg" rel="apple-touch-icon">
+  <link href="http://54.74.139.165/assets/img/favicon.jpeg" rel="icon">
+  <link href="http://54.74.139.165/assets/img/favicon.jpeg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <style>
+
+      /*--------------------------------------------------------------
+      # General
+      --------------------------------------------------------------*/
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #555555;
+      }
+
+      a {
+        text-decoration: none;
+        color: #7cc576;
+      }
+
+      a:hover {
+        color: #9ed49a;
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /*--------------------------------------------------------------
+      # Back to top button
+      --------------------------------------------------------------*/
+      .back-to-top {
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        right: 15px;
+        bottom: 15px;
+        z-index: 996;
+        background: #7cc576;
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        transition: all 0.4s;
+      }
+
+      .back-to-top i {
+        font-size: 28px;
+        color: #fff;
+        line-height: 0;
+      }
+
+      .back-to-top:hover {
+        background: #97d193;
+        color: #fff;
+      }
+
+      .back-to-top.active {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /*--------------------------------------------------------------
+      # Disable AOS delay on mobile
+      --------------------------------------------------------------*/
+      @media screen and (max-width: 768px) {
+        [data-aos-delay] {
+          transition-delay: 0 !important;
+        }
+      }
+
+
+      /*--------------------------------------------------------------
+      # Hero Section
+      --------------------------------------------------------------*/
+      #hero {
+        width: 100%;
+        height: 100vh;
+        background: url("http://54.74.139.165/assets/img/hero-bg.png");
+        position: relative;
+      }
+
+      #hero .hero-container {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px;
+      }
+
+      #hero .hero-logo {
+        margin-bottom: 30px;
+      }
+
+      #hero h1 {
+        margin: 0 0 30px 0;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+        color: #fff;
+      }
+
+      #hero h2 {
+        color: #aeaeae;
+        margin-bottom: 30px;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      #hero .btn-get-started {
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 14px 30px;
+        border-radius: 3px;
+        margin: 10px;
+        color: #fff;
+        background: #7cc576;
+      }
+
+      #hero .btn-get-started:hover {
+        transition: 0.5s;
+        background: #fff;
+        color: #7cc576;
+      }
+
+      @media (min-width: 1024px) {
+        #hero {
+          background-attachment: fixed;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #hero h1 {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        #hero h2 {
+          line-height: 22px;
+        }
+      }
+
+      /*--------------------------------------------------------------
+      # Sections General
+      --------------------------------------------------------------*/
+      section {
+        padding: 60px 0;
+        overflow: hidden;
+      }
+
+      .section-bg {
+        background-color: whitesmoke;
+      }
+
+      .section-title {
+        text-align: center;
+        padding-bottom: 40px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        padding-bottom: 0;
+        color: #151515;
+      }
+
+      .section-title p {
+        margin-bottom: 0;
+        color: #aeaeae;
+      }
+
+
+      @keyframes pulsate-btn {
+        0% {
+          transform: scale(0.6, 0.6);
+          opacity: 1;
+        }
+
+        100% {
+          transform: scale(1, 1);
+          opacity: 0;
+        }
+      }
+
+
+
+      @keyframes animate-loading {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /*--------------------------------------------------------------
+      # Breadcrumbs
+      --------------------------------------------------------------*/
+      .breadcrumbs {
+        padding: 40px 0;
+      }
+
+      .breadcrumbs h2 {
+        font-size: 26px;
+        font-weight: 300;
+      }
+
+      .breadcrumbs ol {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+      }
+
+      .breadcrumbs ol li+li {
+        padding-left: 10px;
+      }
+
+      .breadcrumbs ol li+li::before {
+        display: inline-block;
+        padding-right: 10px;
+        color: #2f2f2f;
+        content: "/";
+      }
+
+      @media (max-width: 768px) {
+        .breadcrumbs .d-flex {
+          display: block !important;
+        }
+
+        .breadcrumbs ol {
+          display: block;
+        }
+
+        .breadcrumbs ol li {
+          display: inline-block;
+        }
+      }
+
+  </style>
 </head>
 
 <body>
@@ -41,12 +288,12 @@
   </section>
 
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/aos/aos.js"></script>
+  <!-- <script src="/assets/vendor/aos/aos.js"></script>
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
