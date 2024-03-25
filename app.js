@@ -67,7 +67,7 @@ app.use(fieUpload());
 
 // routes
 app.get("/",(req,res)=>{
-    return res.send("Welcome to Ecommerce Api");
+    return res.render("index.html");
 })
 
 // routes 
@@ -88,16 +88,15 @@ const port = process.env.PORT || 6000;
 
 // starting point of the server
 let main = async ()=>{  
-    try {
-        await connectDb(process.env.MONGODB_URL);
+  try {
+    await connectDb(process.env.MONGODB_URL);
     app.listen(port, () => {
-    console.log('Server is running on http://localhost:' + port);
-    console.log("++++++++++++++++", process.env.MONGODB_URL);
-    }
-);
-} catch (error) {
-    console.log(error);    
-}
+        console.log('Server is running on http://localhost:' + port);
+        }
+    );
+  } catch (error) {
+      console.log(error);    
+  }
 }
 
 main();
