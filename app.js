@@ -31,8 +31,7 @@ export const app = express();
 
 // middlewares 
 
-// setting our trust proxy to true to allow heroku to trust our proxy
-app.set('trust proxy', 1);
+// app.set('trust proxy', 1);
 
 // limiting the number of requests to our api
 app.use(
