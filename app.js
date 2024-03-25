@@ -66,7 +66,7 @@ app.use(fieUpload());
 
 // routes
 app.get("/",(req,res)=>{
-    return res.render("index.ejs");
+    return res.render("index.html");
 });
 
 // routes 
