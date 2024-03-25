@@ -1,3 +1,9 @@
+/**
+ * Created by;
+ * User: Francis Mogbana
+ * Date: 23/03/2024
+ */
+
 import { isTokenValid } from '../utils/jwt.js';
 
 export const authMiddleware = async (req, res, next) => {

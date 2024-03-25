@@ -1,3 +1,9 @@
+/**
+ * Created by;
+ * User: Francis Mogbana
+ * Date: 23/03/2024
+ */
+
 import { getAllUsers,getUserById,UpdateUser,UpdateUserPassword,getCurrentUser } from "../controllers/user.js";
 import { authMiddleware, authorizeRoles } from "../middlewares/auth.js";
 

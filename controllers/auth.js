@@ -1,3 +1,9 @@
+/**
+ * Created by;
+ * User: Francis Mogbana
+ * Date: 23/03/2024
+ */
+
 import User from '../models/user.js';
 import { createJwt, attachCookiesToResponse } from '../utils/jwt.js';
 import createTokenUser from '../utils/createTokenUser.js';

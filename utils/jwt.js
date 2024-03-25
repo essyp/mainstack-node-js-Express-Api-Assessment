@@ -1,3 +1,9 @@
+/**
+ * Created by;
+ * User: Francis Mogbana
+ * Date: 23/03/2024
+ */
+
 import jwt from "jsonwebtoken";
 
 export const isTokenValid = (tk) =>  jwt.verify(tk,process.env.JWT_SECRET);

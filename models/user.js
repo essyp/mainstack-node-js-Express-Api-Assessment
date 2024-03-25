@@ -1,3 +1,9 @@
+/**
+ * Created by;
+ * User: Francis Mogbana
+ * Date: 23/03/2024
+ */
+
 import mongoose from 'mongoose';
 import validator from 'validator';
 import bcrypt from 'bcryptjs';

@@ -1,3 +1,9 @@
+/**
+ * Created by;
+ * User: Francis Mogbana
+ * Date: 23/03/2024
+ */
+
 import "dotenv/config";
 import express from "express";
 import { connectDb } from './database/mongoose.js';
