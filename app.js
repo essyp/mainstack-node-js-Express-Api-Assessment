@@ -31,7 +31,7 @@ export const app = express();
 
 // middlewares 
 
-// app.set('trust proxy', 1);
+app.set('trust proxy', 1);
 
 // limiting the number of requests to our api
 app.use(
@@ -66,7 +66,7 @@ app.use(fieUpload());
 
 // routes
 app.get("/",(req,res)=>{
-    return res.render("index.html");
+    return res.render("index.ejs");
 })
 
 // routes 
@@ -91,8 +91,7 @@ let main = async ()=>{
     await connectDb(process.env.MONGODB_URL);
     app.listen(port, () => {
         console.log('Server is running on http://localhost:' + port);
-        }
-    );
+    });
   } catch (error) {
       console.log(error);    
   }
